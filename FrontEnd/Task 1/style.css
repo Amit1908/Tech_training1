@@ -1,0 +1,22 @@
+.google
+{
+    width: 40%;
+    float: left;
+}
+
+.fb
+{
+    width: 40%;
+    float: left;
+}
+
+img
+{
+    margin: 50px;
+}
+
+img:hover
+{
+    height: 200px;
+    width: 200px;
+}

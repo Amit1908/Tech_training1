@@ -1,0 +1,17 @@
+table{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    background-color: lightgray;
+    opacity: .7;
+}
+
+body
+{
+    background-color: lightcyan;
+    background-image: url("a1.jpg");
+    /* background-position: center;
+    background-size: cover; */
+}

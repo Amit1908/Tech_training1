@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLD</title>
+
+    <style>
+p
+{
+    border-style: dotted;
+    font-weight: 600;
+    font-size: 20px;
+}
+input
+{
+    background-color: azure;
+}
+label
+{
+    font-family: initial;
+    font-weight: 300;
+    font-size: 18px;
+
+}
+.bd
+{
+    /* border-style: dotted; */
+    background-color: lightgray;
+    padding: 12%;
+    
+}
+.cont
+{
+    /* border-style: dotted; */
+    /* border-style: solid;
+    border: 2px;
+    border-color: black; */
+}
+
+    </style>
+
+</head>
+
+<body class="bd">
+
+   <div class="cont">
+    <label >Today's Gold Rate : </label>
+        <input
+         type="text"
+          name="goldprice"
+           id="goldprice"
+            placeholder="Enter gold price">
+       <label >Weight In Grams</label>
+        <input
+        id="grams"
+        type="text"
+        name="grams"
+        onblur="grams()"
+        placeholder="Enter Grams"
+      />    
+       
+      <p id="p1"></p>
+<br><br>
+<label> Making Charges in % : </label>
+<input type="text" id="making"  onblur="making()" placeholder="Write today's Making Charge">
+<p id="p2"></p>
+<br><br>
+<label > Input Tax Charges (in %) : </label>
+<input type="text" id="taxrates" onblur="tax()" placeholder="Current Tax Charges">
+<p id="p3"></p>
+<p id="p4"></p>
+</div>
+</body>
+<script>
+    var out =0;
+    var Amount =0;
+    var taxcost =0;
+    var total=0;
+    function grams() {
+          
+        var price = document.getElementById("goldprice").value;
+        var grams1 = document.getElementById("grams").value;
+
+        out = parseInt(price) * parseInt(grams1);
+
+        document.getElementById("p1").innerHTML = "Gold Rate Amount is : " + out;
+    }
+    function making()
+    {
+        var price = document.getElementById("goldprice").value;
+        var grams1 = document.getElementById("grams").value;
+
+        var makingcharge =document.getElementById("making").value;
+         out = parseInt(price) * parseInt(grams1);
+
+         Amount = (out*makingcharge)/100;
+        document.getElementById("p2").innerHTML = "Making Charges Amount :" + Amount;
+    }
+    function tax()
+    {
+        taxcost = ((Amount+out)*parseInt(document.getElementById("taxrates").value))/100;
+        document.getElementById("p3").innerHTML="Total Tax Applied on the Gold in Rs :  "+taxcost;
+        total = Amount+taxcost+out;
+        document.getElementById("p4").innerHTML = "Your Total Bill Including Tax And Making Charges is : "+total;
+    }
+
+      </script>
+           </html>
