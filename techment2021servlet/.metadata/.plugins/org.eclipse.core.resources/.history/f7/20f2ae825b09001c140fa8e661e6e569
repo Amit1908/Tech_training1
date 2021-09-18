@@ -1,0 +1,11 @@
+package com.techment;
+
+public class StudentDemo {
+	
+	int StudentId;
+	String Name;
+	String Dept;
+	
+	
+
+}

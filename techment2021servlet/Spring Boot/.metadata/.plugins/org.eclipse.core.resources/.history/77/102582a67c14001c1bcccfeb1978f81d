@@ -1,0 +1,5 @@
+package com.techment.dto;
+
+public class UserDto {
+
+}

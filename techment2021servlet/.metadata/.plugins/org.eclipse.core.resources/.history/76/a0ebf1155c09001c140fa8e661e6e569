@@ -1,0 +1,11 @@
+package com.techment;
+
+public class StudentDto {
+	
+	int StudentId;
+	String Name;
+	String Dept;
+	
+	
+
+}

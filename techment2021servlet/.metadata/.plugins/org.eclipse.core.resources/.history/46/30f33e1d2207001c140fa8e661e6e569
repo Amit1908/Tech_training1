@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-5.3.dtd">  
+  
+
+
+
+<hibernate-mapping>
+<class name="com.techment.Employee" table="Emp600">
+<id name="id"></id>
+<property name="name" column="empname"></property>
+<property name="salary" column="empsalary"></property>
+
+
+</class>
